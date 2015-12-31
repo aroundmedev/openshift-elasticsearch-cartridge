@@ -4,6 +4,9 @@ source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 PID_FILE=$OPENSHIFT_ELASTICSEARCH_DIR/run/elasticsearch.pid
 
+export PUBLISH_HOST=$(python -c "import socket; print socket.gethostbyname('$OPENSHIFT_GEAR_DNS')")
+
+
 function _install_plugins()
 {
   local PLUGIN_CMD="$OPENSHIFT_ELASTICSEARCH_DIR/usr/bin/plugin  -Des.path.home="$OPENSHIFT_ELASTICSEARCH_DIR" -Des.path.conf="$OPENSHIFT_ELASTICSEARCH_DIR/conf" -Des.path.plugins=$OPENSHIFT_DATA_DIR/elasticsearch-plugins"
