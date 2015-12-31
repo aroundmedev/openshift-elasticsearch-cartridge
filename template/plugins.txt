@@ -59,3 +59,5 @@
 
 ## Uncomment line below to install this plugin
 ## elasticsearch/marvel/latest
+elasticsearch/license/latest
+elasticsearch/shield/latest
