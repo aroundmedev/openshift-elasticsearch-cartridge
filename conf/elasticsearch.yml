@@ -146,7 +146,7 @@ node.name: ${OPENSHIFT_GEAR_UUID}
 
 # Path to directory where to store index data allocated for this node.
 #
-path.data: ${OPENSHIFT_DATA_DIR}/elasticsearch
+path.data: ${OPENSHIFT_REPO_DIR}/../repo/data/elasticsearch
 #
 # Can optionally include more than one location, causing data to be striped across
 # the locations (a la RAID 0) on a file level, favouring locations with most free
@@ -392,5 +392,5 @@ marvel.agent.interval: 60s
 shield.authc:
   anonymous:
     username: anonymous_user
-    roles: user 
+    roles: user
     authz_exception: true
