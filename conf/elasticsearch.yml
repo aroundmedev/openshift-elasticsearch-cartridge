@@ -389,3 +389,8 @@ marvel.agent.interval: 60s
 # it unless you need it is recommended (it is disabled by default).
 #
 #http.jsonp.enable: true
+shield.authc:
+  anonymous:
+    username: anonymous_user
+    roles: user 
+    authz_exception: true
